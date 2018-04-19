@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#FF9999</color>
+    <color name="colorPrimaryDark">#FF9999</color>
+    <color name="colorAccent">#FF9999</color>
+
+    <color name="information_click_color">#FF6666</color>
+    <color name="defalut_text_color">#FF9999</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="default_border_color">#666666</color>
+
+    <color name="small_control_background">#444444</color>
+
+    <color name="white_color">#FFFFFF</color>
+
+    <color name="main_control_background">#77444444</color>
+
+    <color name="ijk_transparent_dark">#77000000</color>
 </resources>

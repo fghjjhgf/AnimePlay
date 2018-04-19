@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lb.pachong2.activity.BreifVideoActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/breif_video_swiperefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+        android:id="@+id/breif_video_main_linearyout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/media_viewgroup_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_video_height"
+            android:padding="0dp"
+            tools:context=".activity.PlayerActivity">
+
+            <com.lb.pachong2.widget.KonIjkVideoView
+                android:id="@+id/breif_video_ijkVideoview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"></com.lb.pachong2.widget.KonIjkVideoView>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/breif_video_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ijk_transparent_dark"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                tools:context=".toolbar_widget">
+
+                <ImageButton
+                    android:id="@+id/breif_video_backbutton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_ab_back_holo_dark_am"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/breif_video_episode_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center_vertical|center"
+                    android:text="null"
+                    android:textColor="@color/white_color"
+                    android:textSize="20dp" />
+            </android.support.v7.widget.Toolbar>
+
+            <TableLayout
+                android:id="@+id/breif_video_hud_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:background="@color/ijk_transparent_dark"
+                android:padding="8dp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/pre_or_next_relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/next_episode_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/text_margin"
+                android:text="@string/next_episode" />
+
+            <Button
+                android:id="@+id/quanping_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="全屏"/>
+
+            <Button
+                android:id="@+id/pre_episode_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="@string/pre_episode" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/video_line_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/line1_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="@string/line1" />
+
+            <Button
+                android:id="@+id/line2_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="@string/line2" />
+
+            <Button
+                android:id="@+id/line3_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="@string/line3" />
+
+            <Button
+                android:id="@+id/line4_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="@string/line4" />
+
+            <Button
+                android:id="@+id/line5_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:text="@string/line5" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/breif_video_episode_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"/>
+    </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>
