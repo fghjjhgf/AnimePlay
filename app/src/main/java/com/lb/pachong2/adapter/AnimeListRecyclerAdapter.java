@@ -54,8 +54,13 @@ public class AnimeListRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.
             public void onClick(View v) {
                 Log.d(TAG, animeItemStructList.get(position).getGetAnime_episodes_url());
                 try{
+                    //Intent i = new Intent(context, BreifVideoActivity.class);
+                    //i.putExtra(ConstantString.EPISODESURL,animeItemStructList.get(position).getGetAnime_episodes_url());
+                    //i.putExtra(ConstantString.BANGUMINAME,animeItemStructList.get(position).getAnime_name());
+                    //i.putExtra(ConstantString.EPISODELIST,animeItemStructList);
+                    //context.startActivity(i);
                     Intent i = new Intent(context, BangumiActivity.class);
-                    i.putExtra(ConstantString.BANGUMIURL,animeItemStructList.get(position).getGetAnime_episodes_url());
+                    i.putExtra(ConstantString.BANGUMIURL,animeItemStructList.get(position).getAnime_name_url());
                     i.putExtra(ConstantString.BANGUMINAME,animeItemStructList.get(position).getAnime_name());
                     context.startActivity(i);
                 }catch (Exception e){

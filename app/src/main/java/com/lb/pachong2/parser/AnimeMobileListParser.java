@@ -50,7 +50,7 @@ public class AnimeMobileListParser {
                                 for (Element a : as){
                                     //the value of class is week_item_left
                                     animename = a.text();
-                                    animelink = mobiledomain + a.attr("href");
+                                    animelink = a.attr("href");
                                     LocalLog.log(TAG + " get week_item_left: " + animename + "  " + animelink);
                                 }
                             }

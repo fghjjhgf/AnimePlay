@@ -19,6 +19,7 @@ import com.lb.pachong2.network.Network;
 import com.lb.pachong2.network.ResponeCallBack;
 import com.lb.pachong2.util.BangumiItemStringParcelable;
 import com.lb.pachong2.util.ConstantString;
+import com.lb.pachong2.util.LocalLog;
 
 import org.json.JSONArray;
 
@@ -130,7 +131,9 @@ public class BangumiActivity extends AppCompatActivity {
     private void getData(){
         Intent intent = getIntent();
         bangumiURL = intent.getStringExtra(ConstantString.BANGUMIURL);
+        LocalLog.log(TAG,"bangumiURL " + bangumiURL);
         bangumiName = intent.getStringExtra(ConstantString.BANGUMINAME);
+        LocalLog.log(TAG,"bangumiName " + bangumiName);
     }
 
     private void setView(){

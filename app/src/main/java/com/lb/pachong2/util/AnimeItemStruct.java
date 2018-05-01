@@ -1,6 +1,5 @@
 package com.lb.pachong2.util;
 
-import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -42,7 +41,6 @@ public class AnimeItemStruct implements Parcelable {
         }
     };
 
-    @SuppressLint("WrongConstant")
     @Override
     public int describeContents() {
         return 4;
